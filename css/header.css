@@ -1,0 +1,108 @@
+/* ************************ header */
+/* ************************ header > info */
+#container-info-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #890013;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.icons-info-header {
+    position: relative;
+}
+
+.icons-info-header::before {
+    position: absolute;
+    content: "";
+    left: -35px;
+    width: 30px;
+    height: 30px;
+    filter: invert();
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#icon-address-header::before {
+    background-image: url(../icons/location-icon.png);
+}
+
+#icon-phone-header::before {
+    background-image: url(../icons/phone-icon.png);
+}
+
+#icon-email-header::before {
+    background-image: url(../icons/email-icon.png);
+}
+
+/* ************************ header > slide */
+#container-slide-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #777C89;
+    width: 100%;
+    height: min(1024px, 40vw);
+}
+
+#slide-header {
+    position: relative;
+    width: min(1024px, 55vw);
+    height: 100%;
+    background-color: #777C89;
+    overflow: hidden;
+}
+
+/* the images are hidden on the right to slide them from the sides. */
+.img-slide-header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+.hide-left-img-slide-header {
+    left: -100% !important;
+}
+/* adding this class dynamically via js to show images */
+.show-img-slide-header {
+    left: 0% !important;
+}
+.hide-right-img-slide-header {
+    left: 100% !important;
+}
+
+#container-slide-header > button {
+    height: 40%;
+    color: black;
+    font-size: 5rem;
+    background-color: rgb(86, 0, 12, .1);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#container-slide-header > button:first-child {
+    border-radius: 50px 0 0 50px;
+}
+
+#container-slide-header > button:last-child {
+    border-radius: 0 50px 50px 0;
+}
+
+/* hover */
+#container-slide-header > button:hover {
+    background-color: rgb(86, 0, 12, .5);
+}
+
+#container-slide-header > button > span {
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+#container-slide-header > button:hover > span {
+    transform: scale(1.2);
+}

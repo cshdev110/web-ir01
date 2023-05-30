@@ -1,0 +1,29 @@
+/* imports fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;800&family=Commissioner:wght@100;400;800&display=swap');
+/* imports styles */
+@import url('header.css');
+@import url('menu.css');
+@import url('footer.css');
+
+/* General settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #fff;
+}
+
+h1 {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #56000C;
+}
