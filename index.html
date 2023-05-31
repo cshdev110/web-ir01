@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,12 @@
     <link rel="shortcut icon" href="icons/lotus1.png" type="image/x-icon">
     <title>Garden Indian Restaurant</title>
 </head>
+
 <body>
     <header>
         <div id="container-info-header">
-            <h class="icons-info-header" id="icon-address-header">Chadstone Shopping Centre<br>1341 Dandenong Rd., Malvern East Vic., 3148</h>
+            <h class="icons-info-header" id="icon-address-header">Chadstone Shopping Centre<br>1341 Dandenong Rd.,
+                Malvern East Vic., 3148</h>
             <h class="icons-info-header" id="icon-phone-header">: (03) 9568 1486</h>
             <h class="icons-info-header" id="icon-email-header">: thegarden@c-link.com.au</h>
         </div>
@@ -28,25 +31,137 @@
     </header>
     <!-- nav with seven elements -->
     <nav>
-        <div id="ele-menu-responsive"><img src="icons/menu-close.png"></div>
-        <div id="container-elem-nav">
+        <div id="evnt-menu-responsive"><img src="icons/menu-close.png"></div>
+        <div id="container-elems-nav">
             <img class="logo-nav" src="icons/lotus2.png" alt="logo">
             <div id="container-menu-nav">
                 <ul id="menu-nav">
                     <li class="menu-nav-item"><a href="index.html">Home</a></li>
-                    <li class="menu-nav-item"><a href="about.html">About</a></li>
-                    <li class="menu-nav-item"><a href="lunch_menu.html">Lunch Menu</a></li>
-                    <li class="menu-nav-item"><a href="dinner_menu.html">Dinner Menu</a></li>
-                    <li class="menu-nav-item"><a href="take_away.html">Take Away</a></li>
-                    <li class="menu-nav-item"><a href="booking.html">Booking</a></li>
-                    <li class="menu-nav-item"><a href="gallery.html">Gallery</a></li>
+                    <li class="menu-nav-item"><a href="pages/about.html">About</a></li>
+                    <li class="menu-nav-item" id="dropdown-sub-menu">Menu
+                        <ul id="sub-menu">
+                            <li class="sub-menu-nav-item"><a href="pages/lunch_menu.html">Lunch Menu</a></li>
+                            <li class="sub-menu-nav-item"><a href="pages/dinner_menu.html">Dinner Menu</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-nav-item"><a href="pages/take_away.html">Take Away</a></li>
+                    <li class="menu-nav-item"><a href="pages/booking.html">Booking</a></li>
+                    <li class="menu-nav-item"><a href="pages/gallery.html">Gallery</a></li>
                 </ul>
             </div>
             <img class="logo-nav" src="icons/lotus2.png" alt="logo">
         </div>
     </nav>
-    <main></main>    
+    <main>
+        <section id="section-1-welcome">
+            <div id="container-welcome">
+                <img id="img-welcome" src="icons/lotus1.png" alt="lotus">
+                <h1 id="title-welcome">The Garden Indian Restaurant</h1>
+            </div>
+            <div id="container-welcome-message">
+                <img src="img/TheGarden4.jpg" alt="The Garden image">
+                <h2>Welcome</h2>
+                <p>The Garden Indian Restaurant provides a wide range of dishes, comprised of
+                    quality ingredients and good combination of spices, entice your tastebuds and please don&#39;t
+                    hesitate to make a special requests.<a href="pages/about.html">more...</a>
+                </p>
+                <h2>About</h2>
+                <p>The Garden Indian Restaurant provides a wide range of dishes, comprised of
+                    quality ingredients and good combination of spices, entice your tastebuds and please don&#39;t
+                    hesitate to make a special requests. <a href="pages/about.html">more...</a>
+                </p>
+            </div>
+        </section>
+        <section id="section-2-lunch">
+            <div id="container-lunch-title">
+                <img src="icons/lotus1.png" alt="icon-lotus">
+                <h2>LUNCH</h2>
+                <img src="icons/lotus1.png" alt="icon-lotus">
+            </div>
+            <div id="container-lunch-plates">
+                <div id="lunch-plate-1" class="lunch-plates">
+                    <h3>Entree</h3>
+                    <img src="img/vegetable-samosas.jpg" alt="img-entree">
+                </div>
+                <div id="lunch-plate-2" class="lunch-plates">
+                    <h3>Chicken</h3>
+                    <img src="img/chicken-vindaloo.jpg" alt="img-chicken">
+                </div>
+                <div id="lunch-plate-3" class="lunch-plates">
+                    <h3>Lamb</h3>
+                    <img src="img/lamb-madras.jpg" alt="img-lamb">
+                </div>
+                <div id="lunch-plate-4" class="lunch-plates">
+                    <h3>Beef</h3>
+                    <img src="img/beef-pepper-fry.jpg" alt="img-beef">
+                </div>
+                <div id="lunch-plate-5" class="lunch-plates">
+                    <h3>Vegetarian</h3>
+                    <img src="img/vegetable-jalfrezi.jpg" alt="img-vegetable">
+                </div>
+            </div>
+        </section>
+        <section id="section-3-fix-background">
+            <!-- Fix img is attached to the background of this section using css in index.css file, section 3 -->
+        </section>
+        <section id="section-4-dinner">
+            <div id="container-dinner-title">
+                <img src="icons/lotus2.png" alt="img-lotus">
+                <h2>DINNER</h2>
+                <img src="icons/lotus2.png" alt="img-lotus">
+            </div>
+            <div id="container-dinner-plates">
+                <div id="dinner-plate-1" class="dinner-plates">
+                    <h3>Entree</h3>
+                    <img src="img/vegetable-samosas.jpg" alt="img-vegetable">
+                </div>
+                <div id="dinner-plate-2" class="dinner-plates">
+                    <h3>Chicken</h3>
+                    <img src="img/chicken-vindaloo.jpg" alt="img-chicken">
+                </div>
+                <div id="dinner-plate-3" class="dinner-plates">
+                    <h3>Lamb</h3>
+                    <img src="img/lamb-madras.jpg" alt="img-lamb">
+                </div>
+                <div id="dinner-plate-4" class="dinner-plates">
+                    <h3>Beef</h3>
+                    <img src="img/beef-korma.jpg" alt="img-beef">
+                </div>
+                <div id="dinner-plate-5" class="dinner-plates">
+                    <h3>Seafood</h3>
+                    <img src="img/prawn-malabari.jpg" alt="img-seafood">
+                </div>
+                <div id="dinner-plate-6" class="dinner-plates">
+                    <h3>Vegetarian</h3>
+                    <img src="img/vegetable-jalfrezi.jpg" alt="img-vegetarian">
+                </div>
+                <div id="dinner-plate-7" class="dinner-plates">
+                    <h3>Tandoori</h3>
+                    <img src="img/tandoori.jpg" alt="img-tandoodi">
+                </div>
+                <div id="dinner-plate-8" class="dinner-plates">
+                    <h3>Rice</h3>
+                    <img src="img/rice.jpg" alt="img-rice">
+                </div>
+                <div id="dinner-plate-9" class="dinner-plates">
+                    <h3>Sides</h3>
+                    <img src="img/sides.jpg" alt="img-sides">
+                </div>
+            </div>
+        </section>
+        <section id="section-5-take-away-booking">
+            <div id="container-take-away" class="container-take-away-booking">
+                <h2>Take-Away</h2>
+                <img src="icons/take-away.png" alt="img-take-away">                
+            </div>
+            <div id="container-booking" class="container-take-away-booking">
+                <h2>Booking</h2>
+                <img src="icons/reserved.png" alt="img-reserved">
+            </div>
+        </section>
+    </main>
     <footer></footer>
     <script src="js/script.js"></script>
 </body>
+
 </html>

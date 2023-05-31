@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;800&family=Commissioner:wght@100;400;800&display=swap');
 /* imports styles */
 @import url('header.css');
-@import url('menu.css');
+@import url('nav.css');
+@import url('index.css');
 @import url('footer.css');
 
 /* General settings */
@@ -12,7 +13,15 @@
     box-sizing: border-box;
 }
 
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
 /* Minimuns screen is for Galaxy S5 witha 360px width screen */
+/* Maximuns screen for desktop 1366px */
 body {
     font-family: 'Assistant', sans-serif;
     font-size: 1em;
@@ -20,6 +29,7 @@ body {
     color: #000000;
     background-color: #fff;
     min-width: 360px;
+    max-width: 1366px;
 }
 
 h1 {

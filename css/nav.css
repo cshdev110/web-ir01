@@ -1,0 +1,126 @@
+/* ************************ nav (menu) */
+/* Responsive menu's button hidden while the screen is over 768px */
+#evnt-menu-responsive {
+    display: none;
+}
+
+#container-elems-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #56000C;
+    position: sticky;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo-nav {
+    width: 45px;
+}
+
+#menu-nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-nav li:nth-child(3) {
+    position: relative;
+    overflow: hidden;
+    background-color: #56000C;
+    z-index: 10;
+}
+
+/* drop down */
+#sub-menu {
+    position: absolute;
+    display: flex;
+    top: -100%;
+    flex-direction: column;
+    width: 120px;
+    background-color: #4b000a;
+    list-style-type: none;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.parent-sub-menu-to-dropdown,
+#menu-nav li:nth-child(3):hover {
+    overflow: visible !important;
+}
+
+.active-sub-menu,
+#menu-nav li:nth-child(3):hover #sub-menu {
+    opacity: 1 !important;
+    top: 100% !important;
+}
+
+
+
+#container-elems-nav li:nth-child(5) {
+    background-color: #B3031B;
+}
+
+#menu-nav li a, #dropdown-sub-menu  {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#menu-nav li a:hover, #dropdown-sub-menu:hover {
+    background-color: #111 !important;
+}
+
+/* ************************ @media (responsive) */
+@media screen and (max-width: 768px) {
+    nav {
+        background-color: #56000C;
+    }
+    #evnt-menu-responsive {
+        display: flex;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+    
+    #evnt-menu-responsive:hover,
+    #evnt-menu-responsive:active {
+        background-color: #1A0004;
+    }
+
+    #evnt-menu-responsive > img {
+        filter: invert();
+    }
+
+    #evnt-menu-responsive > img:hover,
+    #evnt-menu-responsive > img:active {
+        transform: scale(1.1);
+    }
+
+    #container-elems-nav {
+        display: none;
+        flex-direction: column;
+    }
+
+    #container-elems-nav ul {
+        flex-direction: column;
+    }
+
+    /* submenu */
+    #sub-menu {
+        position: static;
+        opacity: 1;
+        top: 0;
+        height: 0px;
+    }
+
+    .active-sub-menu-media-screen,
+    #dropdown-sub-menu:hover > #sub-menu {
+        height: 100% !important;        
+    }
+}
