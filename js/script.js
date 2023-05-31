@@ -1,4 +1,7 @@
 // ********************* Variables *********************
+// nav vars
+const nav = document.querySelector('nav');
+
 // slide header vars
 const containerSlideHeader = document.querySelector('#container-slide-header');
 const imgSlideHeader = document.querySelectorAll('.img-slide-header');
@@ -24,6 +27,7 @@ const takeAway_bookings = document.querySelectorAll('.container-take-away-bookin
 
 
 // ********************* Functions *********************
+
 // Slide Header
 function showSlideHeader(slide_number, slide_side = 'right'){    
     imgSlideHeader.forEach((img, index) => {
@@ -55,6 +59,16 @@ function showMenuResponsive(){
 // ********************* End Functions *********************
 
 // ********************* Events *********************
+
+// nav events when the nav tag reaches the top of the page when scrolling
+window.addEventListener('scroll', () => {
+    if(nav.getBoundingClientRect().top <= 0){
+        nav.style.backgroundColor = '#56000CD0';
+    }else{
+        nav.style.backgroundColor = '';
+    }
+});
+
 // Slide Header - buttons
 btnSlideLeftHeader.addEventListener('click', () => {
     slideHeader--;

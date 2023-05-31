@@ -1,4 +1,10 @@
 /* ************************ nav (menu) */
+nav {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background-color: #56000C;
+}
 /* Responsive menu's button hidden while the screen is over 768px */
 #evnt-menu-responsive {
     display: none;
@@ -8,7 +14,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: #56000C;
     position: sticky;
     width: 100%;
     z-index: 1;
@@ -28,7 +33,6 @@
 #menu-nav li:nth-child(3) {
     position: relative;
     overflow: hidden;
-    background-color: #56000C;
     z-index: 10;
 }
 
@@ -78,9 +82,8 @@
 
 /* ************************ @media (responsive) */
 @media screen and (max-width: 768px) {
-    nav {
-        background-color: #56000C;
-    }
+    
+    /* ************************ nav (menu) */
     #evnt-menu-responsive {
         display: flex;
         width: 45px;
