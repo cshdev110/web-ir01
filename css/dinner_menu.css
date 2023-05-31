@@ -1,0 +1,23 @@
+/* ************************ main */
+/* ************************ section 1 dinner menu */
+#section-1-dinner-menu {
+    display: flex;
+    justify-content: center;
+    padding: 5% 0%;
+}
+
+#section-1-dinner-menu th {
+    text-align: left;
+    background-color: #890013;
+    color: #FFFFFF;
+}
+
+#section-1-dinner-menu th[colspan="3"] {
+    text-align: center;
+    background-color: #890013;
+    color: #FFFFFF;
+}
+
+#section-1-dinner-menu tr td:last-child {
+    text-align: right;
+}

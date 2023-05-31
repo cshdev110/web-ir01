@@ -4,6 +4,9 @@
 @import url('header.css');
 @import url('nav.css');
 @import url('index.css');
+@import url('about.css');
+@import url('lunch_menu.css');
+@import url('dinner_menu.css');
 @import url('footer.css');
 
 /* General settings */
@@ -30,6 +33,7 @@ body {
     background-color: #fff;
     min-width: 360px;
     max-width: 1366px;
+    width: 100%;
 }
 
 h1 {
@@ -38,4 +42,11 @@ h1 {
     font-weight: 800;
     line-height: 1.2;
     color: #56000C;
+}
+
+/* Defualt style for table */
+table, th, td {
+    padding: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
 }

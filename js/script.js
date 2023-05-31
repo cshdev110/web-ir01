@@ -1,6 +1,9 @@
 // ********************* Variables *********************
 // nav vars
+const currentPage = window.location.href;
 const nav = document.querySelector('nav');
+const navListsUrl = document.querySelectorAll('nav li a');
+const navLists = document.querySelectorAll('nav li');
 
 // slide header vars
 const containerSlideHeader = document.querySelector('#container-slide-header');
@@ -66,6 +69,17 @@ window.addEventListener('scroll', () => {
         nav.style.backgroundColor = '#56000CD0';
     }else{
         nav.style.backgroundColor = '';
+    }
+});
+
+// highlight the current page in the nav bar
+navListsUrl.forEach((elem) => {
+    if(elem.href == currentPage){
+        navLists.forEach((li) => {
+            if(li.contains(elem)){
+                li.style.backgroundColor = '#1A0004';
+            }
+        });
     }
 });
 

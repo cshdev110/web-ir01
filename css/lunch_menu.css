@@ -1,0 +1,25 @@
+/* ************************ main */
+/* ************************ section 1 lunch menu */
+#section-1-lunch-menu {
+    display: flex;
+    justify-content: center;
+    padding: 5% 0%;
+}
+
+#section-1-lunch-menu caption {
+    font-weight: 800;
+    margin-bottom: 2%;
+    font-size: min(1.3rem, 5vw);
+}
+
+#section-1-lunch-menu th {
+    text-align: left;
+    background-color: #890013;
+    color: #FFFFFF;
+}
+
+#section-1-lunch-menu th[colspan="2"] {
+    text-align: center;
+    background-color: #890013;
+    color: #FFFFFF;
+}
