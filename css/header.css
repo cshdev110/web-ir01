@@ -4,10 +4,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 0;
     background-color: #890013;
     color: #FFFFFF;
-    font-weight: 700;
 }
 
 .icons-info-header {
@@ -17,12 +15,15 @@
 .icons-info-header::before {
     position: absolute;
     content: "";
-    left: -35px;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 30px;
     height: 30px;
     filter: invert();
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
 }
 
 #icon-address-header::before {
@@ -50,35 +51,27 @@
 
 #slide-header {
     position: relative;
-    width: min(1024px, 55vw);
+    width: min(1024px, 65vw);
     height: 100%;
     background-color: #777C89;
     overflow: hidden;
 }
 
-/* the images are hidden on the right to slide them from the sides. */
+/* the images are hidden on the left to slide them from the sides. */
 .img-slide-header {
     position: absolute;
+    visibility: hidden;
+    left: -100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 1;
     transition: all 0.3s ease-in-out;
 }
-.hide-left-img-slide-header {
-    left: -100% !important;
-}
-/* adding this class dynamically via js to show images */
-.show-img-slide-header {
-    left: 0% !important;
-}
-.hide-right-img-slide-header {
-    left: 100% !important;
-}
 
 #container-slide-header > button {
-    height: 40%;
-    color: black;
+    height: 100%;
+    color: #1A00041a;
     font-size: 5rem;
     background-color: rgb(86, 0, 12, .1);
     border: none;
@@ -87,22 +80,53 @@
 }
 
 #container-slide-header > button:first-child {
-    border-radius: 50px 0 0 50px;
+    border-radius: 100% 0 0 100%;
 }
 
 #container-slide-header > button:last-child {
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 100% 100% 0;
 }
 
 /* hover */
-#container-slide-header > button:hover {
+#container-slide-header > button:hover,
+#container-slide-header > button:active {
     background-color: rgb(86, 0, 12, .5);
+    color: #1A0004e6;
 }
 
 #container-slide-header > button > span {
     display: inline-block;
     transition: all 0.2s ease-in-out;
 }
-#container-slide-header > button:hover > span {
-    transform: scale(1.2);
+
+#container-slide-header > button:active > span {
+    transform: scale(1.3);
+}
+
+/* #container-slide-header > button:active > span {
+    transform: scale(1.3);
+} */
+
+/* ************************ @media (responsive) */
+@media screen and (max-width: 768px) {
+
+    /* ************************ header > info */
+    #container-info-header {
+        font-size: 0.9em;
+        padding: 1% 0%;
+    }
+
+    #icon-address-header {
+        display: none;
+    }
+
+    .icons-info-header::before {
+        left: -20px;
+        width: 20px;
+    }
+
+    /* ************************ header > slide */
+    #container-slide-header > button {
+        font-size: 3rem;
+    }
 }
