@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +54,35 @@
     </nav>
     <main>
         <section id="section-1-take-away">
-            
+            <div id="container-take-away-form">
+                <form action="" id="sign-in-up">
+                    <!-- name and passoword. validation in javascript -->
+                    <h2>Sign-in to take your order or sign-up first</h2>
+                    <label for="name">Name</label>
+                    <input type="text" id="name-take-away" class="required-info" name="name" placeholder="Enter your name" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="required-info" name="password" placeholder="Enter your password" required>
+                    <button type="submit" class="buttons-form-take-away">Sign-in</button>
+                    <p>
+                        Don't have an account?
+                        <a href="#" id="show-sign-up-take-away-form">Sign Up</a>
+                    </p>
+                </form>
+
+                <!-- modal element to sign up. Only name and password-->
+                <div id="modal-sign-up">
+                    <form action="" id="sign-up">
+                        <h2>Sign-up</h2>
+                        <label for="name">Name</label>
+                        <input type="text" id="name-take-away" class="required-info" name="name" placeholder="Enter your name" required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="required-info" name="password" placeholder="Enter your password"
+                            required>
+                        <button type="submit" class="buttons-form-take-away">Sign-up</button>
+                        <button type="button" id="hide-sign-up-take-away-form" class="buttons-form-take-away">Cancel</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -96,6 +127,6 @@
             <a href="report.html">REPORT</a>
         </div>
     </footer>
-    <script src="../js/script.js"></script>
+    <script type="module" src="../js/script.js"></script>
 </body>
 </html>

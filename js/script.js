@@ -26,6 +26,11 @@ const dinner_plates = document.querySelectorAll('.dinner-plates img');
 
 // section 5 vars
 const takeAway_bookings = document.querySelectorAll('.container-take-away-booking img');
+
+// take away vars
+// modal vars
+const modal = document.querySelector('#modal-sign-up');
+
 // ********************* End Variables *********************
 
 
@@ -57,7 +62,6 @@ function showMenuResponsive(){
         containerMenuResponsive.style.display = '';
     }
 }
-
 
 // ********************* End Functions *********************
 
@@ -112,6 +116,7 @@ menuResponsive.addEventListener('click', () => {
 // when the screen is less than 768px or over. 
 // Ending removing the classes when the user clicks outside the sub menu to reset the styles
 document.addEventListener('click', (evt) => {
+    // to hide sub-menu
     if(subMenuDropdown.contains(evt.target)){
         subMenuDropdown.classList.toggle('parent-sub-menu-to-dropdown');
         if(window.innerWidth <= 768){
@@ -151,6 +156,21 @@ takeAway_bookings.forEach((elem, indx) => {
             window.location.href = 'pages/booking.html';
         });
     }
+});
+
+// show modal element to sign up
+document.querySelector('#show-sign-up-take-away-form').addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
+
+// hide modal element to sign up
+document.querySelector('#hide-sign-up-take-away-form').addEventListener('click', () => {
+    modal.style.display = '';
+});
+
+// Filfering name. Only letters, dots and spaces are allowed
+document.querySelector('#name-take-away').addEventListener('keyup', (evt) => {
+    evt.target.value = /(?:[a-zA-Z.\s]+)/.exec(evt.target.value);
 });
 
 
