@@ -1,0 +1,62 @@
+/* ************************ main */
+/* ************************ section 1 home */
+
+/* general settings */
+.ifram-style {
+    width: min(800px, 100vw);
+    transform-origin: top left;
+    transform: scale(0.5);
+    height: 200vh;
+    border: none;
+    overflow: ;
+}
+
+#wrap-fram{
+    position: sticky;
+    top: 52px;
+    right: 0%;
+    z-index: 10;
+    float: left;
+    overflow: hidden;
+    width: 500px;
+    height: 300vh;
+}
+
+#container-presentation-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #777C89;
+    width: 100%;
+    padding: 5% 0;
+    text-align: center;
+    /* height: min(600px, 40vw); */
+}
+
+#container-presentation-header img {
+    width: min(100px, 20vw);
+}
+
+#container-presentation-header h1 {
+    font-size: min(2.5rem, 8vw);
+}
+
+#container-presentation-header h2 {
+    font-size: min(1.5rem, 6vw);
+}
+
+#container-presentation-header h3 {
+    font-size: min(1.2rem, 4.5vw);
+}
+
+/* section */
+section {
+    padding: 2% 1%;
+    width: 100%;
+}
+
+.articles-report {
+    /* width: 500px; */
+
+}
