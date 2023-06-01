@@ -55,14 +55,19 @@
     <main>
         <section id="section-1-take-away">
             <div id="container-take-away-form">
-                <form action="" id="sign-in-up">
+                <form action="" id="sign-in-up-take-away-form" method="post">
                     <!-- name and passoword. validation in javascript -->
-                    <h2>Sign-in to take your order or sign-up first</h2>
+                    <h2>Sign-in to take your order or sign-up </h2>
+                    <!-- name -->
                     <label for="name">Name</label>
-                    <input type="text" id="name-take-away" class="required-info" name="name" placeholder="Enter your name" required>
+                    <input type="text" id="name-sign-in-take-away" class="required-info required-info-name" name="name"
+                        placeholder="Enter your name" maxlength="50" onfocusin="fn_add_required_attribute(event)">
+                    <!-- password -->
                     <label for="password">Password</label>
-                    <input type="password" id="password" class="required-info" name="password" placeholder="Enter your password" required>
-                    <button type="submit" class="buttons-form-take-away">Sign-in</button>
+                    <input type="password" id="password-sign-in-take-away" class="required-info"
+                        name="password" placeholder="Enter your password" onfocusin="fn_add_required_attribute(event)">
+
+                    <button type="submit" id="submit-signin-take-away" class="buttons-form-take-away">Sign-in</button>
                     <p>
                         Don't have an account?
                         <a href="#" id="show-sign-up-take-away-form">Sign Up</a>
@@ -71,17 +76,154 @@
 
                 <!-- modal element to sign up. Only name and password-->
                 <div id="modal-sign-up">
-                    <form action="" id="sign-up">
+                    <form action="" id="sign-up-take-away-form" method="post">
                         <h2>Sign-up</h2>
+                        <!-- name -->
                         <label for="name">Name</label>
-                        <input type="text" id="name-take-away" class="required-info" name="name" placeholder="Enter your name" required>
+                        <input type="text" id="name-sign-up-take-away" class="required-info required-info-name"
+                            name="name" placeholder="Enter your name" maxlength="50"
+                            onfocusin="fn_add_required_attribute(event)">
+                        <!-- phone -->
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone-sign-up-take-away" class="required-info required-info-phone" name="phone"
+                            placeholder="Enter your phone number" placeholder="0000-000-000" maxlength="12"
+                            onfocusin="fn_add_required_attribute(event)">
+                        <!-- password -->
                         <label for="password">Password</label>
-                        <input type="password" id="password" class="required-info" name="password" placeholder="Enter your password"
-                            required>
-                        <button type="submit" class="buttons-form-take-away">Sign-up</button>
-                        <button type="button" id="hide-sign-up-take-away-form" class="buttons-form-take-away">Cancel</button>
+                        <input type="password" id="password-sign-up-take-away" class="required-info" name="password"
+                            placeholder="Enter your password" onfocusin="fn_add_required_attribute(event)">
+
+                        <button type="submit" id="submit-signup-take-away"
+                            class="buttons-form-take-away">Sign-up</button>
+                        <button type="button" id="hide-sign-up-take-away-form"
+                            class="buttons-form-take-away">Cancel</button>
                     </form>
                 </div>
+
+                <!-- form to choose the food. -->
+                <form action="" id="taking-order" method="post">
+                    <h2 id="name-active-client"></h2>
+                    <h2 id="total-active-client"></h2>
+                    <h2 id="date-order-active-client"></h2>
+                    <label for="entrees">Entrée:</label>
+                    <select id="entrees" name="entrees">
+                        <option value="-1">Select</option>
+                        <option value="0">Vegetable Samosa</option>
+                        <option value="1">Onion Bhaji</option>
+                        <option value="2">Hara Bhara Kebab</option>
+                        <option value="3">Chicken Tikka</option>
+                        <option value="4">Seekh Kebab</option>
+                    </select>
+
+                    <label for="chicken">Chicken:</label>
+                    <select id="chicken" name="chicken">
+                        <option value="-1">Select</option>
+                        <option value="0">Chicken Tikka Masala (medium)</option>
+                        <option value="1">Chicken Balti (medium)</option>
+                        <option value="2">Chicken Korma (mild)</option>
+                        <option value="3">Kadai Chicken (medium)</option>
+                        <option value="4">Chicken Vindaloo (HOT)</option>
+                        <option value="5">Mysore Chicken (HOT)</option>
+                    </select>
+
+                    <label for="lamb">Lamb:</label>
+                    <select id="lamb" name="lamb">
+                        <option value="-1">Select</option>
+                        <option value="0">Lamb Rogan Josh (medium)</option>
+                        <option value="1">Lamb Korma (mild)</option>
+                        <option value="2">Lamb Madras (medium)</option>
+                        <option value="3">Saag Lamb (mild to medium)</option>
+                        <option value="4">Lamb Masala (medium)</option>
+                        <option value="5">Lamb Vindaloo (HOT)</option>
+                    </select>
+
+                    <label for="beef">Beef:</label>
+                    <select id="beef" name="beef">
+                        <option value="-1">Select</option>
+                        <option value="0">Beef Rogan Josh (medium)</option>
+                        <option value="1">Beef Masala (medium)</option>
+                        <option value="2">Beef Korma (mild)</option>
+                        <option value="3">Beef Madras (mild to medium)</option>
+                        <option value="4">Beef Vindaloo (HOT)</option>
+                        <option value="5">Beef Pepper Fry (HOT)</option>
+                    </select>
+
+                    <label for="seafood">Seafood:</label>
+                    <select id="seafood" name="seafood">
+                        <option value="-1">Select</option>
+                        <option value="0">Prawn Malabari (mild)</option>
+                        <option value="1">Prawn / Fish Masala (medium)</option>
+                        <option value="2">Prawn Vindaloo (HOT)</option>
+                        <option value="3">Butter Prawn (mild)</option>
+                        <option value="4">Goan Fish Curry (mild)</option>
+                    </select>
+
+                    <label for="vegetarian">Vegetarian:</label>
+                    <select id="vegetarian" name="vegetarian">
+                        <option value="-1">Select</option>
+                        <option value="0">Butter Paneer (mild)</option>
+                        <option value="1">Paneer Tikka Masala (medium)</option>
+                        <option value="2">Kadai Paneer (medium)</option>
+                        <option value="3">Paneer Bhurji (medium)</option>
+                        <option value="4">Palak Paneer (mild to medium)</option>
+                        <option value="5">Achari Paneer (medium)</option>
+                        <option value="6">Vegetable Korma (mild)</option>
+                        <option value="7">Mix vegetable (medium)</option>
+                        <option value="8">Vegetable Madras (mild to medium)</option>
+                        <option value="9">Vegetable Jalfrezi (medium)</option>
+                        <option value="10">Chole Masala/Chole Palak (medium)</option>
+                        <option value="11">Malai Kofta (mild)</option>
+                        <option value="12">Aloo Gobi / Aloo Mutter (medium)</option>
+                        <option value="13">Saag Aloo (mild)</option>
+                        <option value="14">Bombay Potatoes dry (mild)</option>
+                        <option value="15">Dal Tadka (mild to medium)</option>
+                        <option value="16">Dal Makhani (medium)</option>
+                    </select>
+
+                    <label for="tandoori-bread">Tandoori Bread:</label>
+                    <select id="tandooriBread" name="tandoori-bread">
+                        <option value="-1">Select</option>
+                        <option value="0">Plain Naan</option>
+                        <option value="1">Garlic Naan</option>
+                        <option value="2">Cheese Naan</option>
+                        <option value="3">Cheese & Garlic Naan</option>
+                        <option value="4">Peshawari Naan</option>
+                        <option value="5">Aloo Naan</option>
+                        <option value="6">Kheema Naan / Paneer Naan</option>
+                        <option value="7">Chilli Naan</option>
+                        <option value="8">Spinach Naan</option>
+                        <option value="9">Cheese & Chilli Naan</option>
+                        <option value="10">Cheese & Spinach Naan</option>
+                        <option value="11">Roti</option>
+                        <option value="12">Paratha</option>
+                    </select>
+
+                    <label for="rice">Rice:</label>
+                    <select id="rice" name="rice">
+                        <option value="-1">Select</option>
+                        <option value="0">Steamed Rice</option>
+                        <option value="1">Saffron Rice</option>
+                        <option value="2">Coconut Rice</option>
+                        <option value="3">Jeera Peas Rice</option>
+                        <option value="4">Biryani Rice</option>
+                    </select>
+
+                    <label for="sides">Sides:</label>
+                    <select id="sides" name="sides">
+                        <option value="-1">Select</option>
+                        <option value="0">Papadams</option>
+                        <option value="1">Cucumber Raita</option>
+                        <option value="2">Sweet Mango Chutney</option>
+                        <option value="3">Mint Sauce</option>
+                        <option value="4">Pickles</option>
+                    </select>
+                    <!-- two buttons. reset and submit -->
+                    <div id="container-buttons">
+                        <input type="button" value="New" id="reset-take-away-order-form" class="buttons-form-take-away">
+                        <input type="submit" value="Order" id="submit-take-away-order-form"
+                            class="buttons-form-take-away">
+                    </div>
+                </form>
             </div>
         </section>
     </main>
@@ -129,4 +271,5 @@
     </footer>
     <script type="module" src="../js/script.js"></script>
 </body>
+
 </html>

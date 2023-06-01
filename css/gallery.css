@@ -1,0 +1,47 @@
+/* ************************ main */
+/* ************************ section 1 gallery */
+/* styling the gallery */
+#section-1-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container-galley-imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.container-img-galley-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5% 2%;
+}
+
+.container-galley-imgs h2 {
+    margin-top: 5%;
+}
+.container-img-galley-imgs img {
+    width: min(300px, 90vw);
+    margin: 1% 1%;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px 2px rgba(0,0,0,1);
+    transition: all 0.2s ease-out;
+}
+
+.modal-img {
+    display: flex;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(450px, 90vw) !important;
+    object-fit: contain;
+    box-shadow: 0px 0px 300px 200px rgba(0,0,0,1) !important;
+}

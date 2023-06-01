@@ -2,40 +2,24 @@ export class ClientInformation {
 
     order = {
         active: false,
-        numberOrder: 0,
+        date: '',
+        total: 0,
         food: {
-            entree:'',
-            chicken: '',
-            lamb: '',
-            beef: '',
-            seafood: '',
-            vegetarian: '',
-            tandoori: '',
-            rice: '',
-            sides: ''
+            entrees: {type: '', price: 0},
+            chicken: {type: '', price: 0},
+            lamb: {type: '', price: 0},
+            beef: {type: '', price: 0},
+            seafood: {type: '', price: 0},
+            vegetarian: {type: '', price: 0},
+            tandooriBread: {type: '', price: 0},
+            rice: {type: '', price: 0},
+            sides: {type: '', price: 0}
         }
     };
 
-    storeOrders = [];
-
-    booking = {
-        active: false,
-        numberBooking: 0,
-        details: {
-            name: '',
-            phone: '',
-            email: '',
-            date: '',
-            time: '',
-            people: '',
-            message: ''
-        }
-    };
-
-    storeBookings = [];
-
-    constructor(name, password) {
+    constructor(name, phone, password) {
         this.name = name;
+        this.phone = phone;
         this.password = password;
     }
 
@@ -44,16 +28,12 @@ export class ClientInformation {
         return this.name;
     }
 
+    get getPhone() {
+        return this.phone;
+    }
+
     get getPassword() {
         return this.password;
-    }
-
-    get getOrders() {
-        return this.storeOrders;
-    }
-
-    get getBookings() {
-        return this.storeBookings;
     }
 
     // Setters
@@ -61,27 +41,12 @@ export class ClientInformation {
         this.name = name;
     }
 
+    set setPhone(phone) {
+        this.phone = phone;
+    }
+
     set setPassword(password) {
         this.password = password;
-    }
-
-    set setOrders(order) {
-        this.storeOrders.push(order);
-    }
-
-    set setBookings(booking) {
-        this.storeBookings.push(booking);
-    }
-
-    // Methods
-    addOrder(order) {
-        this.order = order;
-        this.setOrders = this.order;
-    }
-
-    addBooking(booking) {
-        this.booking = booking;
-        this.setBookings = this.booking;
     }
 
 }

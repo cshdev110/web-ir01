@@ -1,3 +1,7 @@
+/* ************************ footer */
+footer {
+    clear: both;
+}
 /* ************************ footer > company info */
 #container-company-info {
     display: flex;
