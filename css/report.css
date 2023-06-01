@@ -8,7 +8,6 @@
     transform: scale(0.5);
     height: 200vh;
     border: none;
-    overflow: ;
 }
 
 #wrap-fram{
@@ -19,7 +18,7 @@
     float: left;
     overflow: hidden;
     width: 500px;
-    height: 300vh;
+    height: 250vh;
 }
 
 #container-presentation-header {
@@ -54,9 +53,4 @@
 section {
     padding: 2% 1%;
     width: 100%;
-}
-
-.articles-report {
-    /* width: 500px; */
-
 }
